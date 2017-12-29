@@ -1,6 +1,5 @@
 (function() {
     'use strict';
-    document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
         console.log("PhoneGap: Device is ready");
         if(navigator.geolocation) {
@@ -10,5 +9,10 @@
         } else {
             console.error('geolocation is not available on your device');
         }
+    }
+    document.addEventListener("deviceready", onDeviceReady, false);
+    if(document.URL.indexOf( 'http://' ) !== -1 || document.URL.indexOf( 'https://' ) !== -1) {
+        // If on browser, trigger onDeviceReady manually (phonegap uses file:/// urls)
+        onDeviceReady();
     }
 })();
