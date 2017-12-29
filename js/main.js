@@ -13,6 +13,7 @@
     document.addEventListener("deviceready", onDeviceReady, false);
     if(document.URL.indexOf( 'http://' ) !== -1 || document.URL.indexOf( 'https://' ) !== -1) {
         // If on browser, trigger onDeviceReady manually (phonegap uses file:/// urls)
+        console.log('PhoneGap: is browser, triggering device ready');
         onDeviceReady();
     }
 })();
