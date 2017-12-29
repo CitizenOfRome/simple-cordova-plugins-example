@@ -6,6 +6,9 @@ version   = "1.0.0">
 
     <name>Simple Phonegap/Cordova Plugins Example</name>
     <description>Simple Phonegap/Cordova Plugins Example</description>
+
+    <preference name='phonegap-version' value='cli-7.0.1' />
+    <preference name='pgb-builder-version' value='2' />
     
     <access origin="*" subdomains="true" />
     
